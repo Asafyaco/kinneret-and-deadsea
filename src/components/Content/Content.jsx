@@ -61,9 +61,13 @@ export default class Content extends React.Component {
           <img
             width={700}
             src={
-              this.state.isLess0
+              this.state.isLess0 === ""
+                ? ""
+                : this.state.isLess0
                 ? "https://images4.alphacoders.com/108/1082304.jpg"
-                : "https://www.tiuli.com/image/89065e32eeaa32c8e6ea1bc5894bc4e7.jpg?&width=1200&height=630"
+                : !this.state.isLess0
+                ? "https://www.tiuli.com/image/89065e32eeaa32c8e6ea1bc5894bc4e7.jpg?&width=1200&height=630"
+                : ""
             }
           />
         </div>
